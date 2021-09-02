@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     PostModel postModel = response.body();
                     String content = "";
-                    content = postModel.getFact() + "\n";
+                    content = "Fact: "+postModel.getFact() + "\n";
 
                     meawtext.setText(content);
                 }
