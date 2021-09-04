@@ -13,10 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="310dp"
         android:layout_marginTop="220dp"
-        android:fontFamily="@font/crafty_girls"
-        android:padding="10dp"
+        android:fontFamily="@font/autour_one"
         android:hint="Every time yoy tap on cat with pencil, you get a fact"
-        android:textColor="#FF92AA"
+        android:padding="10dp"
+        android:text="slafd ksdfjasd sadjfa sflkaf "
+        android:textColor="#573C42"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,16 +35,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/meawtext" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/catrunning" />
+<!--    <com.airbnb.lottie.LottieAnimationView-->
+<!--        android:id="@+id/animationView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:lottie_autoPlay="true"-->
+<!--        app:lottie_loop="true"-->
+<!--        app:lottie_rawRes="@raw/catrunning" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
