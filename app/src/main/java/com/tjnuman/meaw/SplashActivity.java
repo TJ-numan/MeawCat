@@ -13,7 +13,7 @@ import com.airbnb.lottie.LottieAnimationView;
 
 public class SplashActivity extends AppCompatActivity {
 
-    Animation topAnimation;
+    Animation topAnimation, bottomAnimation;
     LottieAnimationView animationView;
 
     @Override
@@ -22,12 +22,17 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//        animationView = findViewById(R.id.animationView);
+        animationView = findViewById(R.id.animationView);
+
+        bottomAnimation = AnimationUtils.loadAnimation(this,R.anim.downtotop);
+        animationView.setAnimation(bottomAnimation);
+
 //        topAnimation = AnimationUtils.loadAnimation(this,R.anim.toptodown);
 //        animationView.setAnimation(topAnimation);
 
 
-        final Intent i = new Intent(SplashActivity.this, MainActivity.class);
+
+        final Intent i = new Intent(SplashActivity.this, ButtonActivity.class);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -35,7 +40,7 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(i);
                 finish();
             }
-        }, 4500);
+        }, 4555);
 
 
 

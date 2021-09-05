@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cat"
+    tools:context=".ButtonActivity">
+
+
+    <ImageView
+        android:id="@+id/whentocallvat"
+        android:layout_width="260dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="210dp"
+        android:src="@drawable/buttonbgwithtext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/firstaid"
+        android:layout_width="260dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/catbreedsbutton"
+        app:layout_constraintEnd_toEndOf="@+id/catbreed"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/catbreed"
+        app:layout_constraintTop_toBottomOf="@+id/catbreed" />
+
+    <ImageView
+        android:id="@+id/catfact"
+        android:layout_width="260dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/catfactbutton"
+        app:layout_constraintEnd_toEndOf="@+id/firstaid"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/firstaid"
+        app:layout_constraintTop_toBottomOf="@+id/firstaid" />
+
+    <ImageView
+        android:id="@+id/catbreed"
+        android:layout_width="260dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/firstaidbutton"
+        app:layout_constraintEnd_toEndOf="@+id/whentocallvat"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/whentocallvat"
+        app:layout_constraintTop_toBottomOf="@+id/whentocallvat" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
