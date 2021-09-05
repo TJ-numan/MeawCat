@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +13,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="220dp"
         android:fontFamily="@font/allerta"
         android:padding="8dp"
         android:text="You should call the vat if:"
@@ -24,18 +25,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="341dp"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:padding="8dp"
-        android:text="Your pet seems weak, is reluctant to get up, or is dull or depressed \n\nThere is difficulty breathing, the breath is noisy or rapid, or there is continual coughing that is causing distress \n\nThere is repeated vomiting, particularly if the animal is young or elderly. Diarrhoea, however, is less serious (except in kittens) unless it is severe, bloody or the animal seems weak or unwell. Feed small amounts of a bland diet (boiled chicken or white fish) and see a vet if it persists more than a day. \n\nYour cat appears to be in severe pain or discomfort \n\n your pet suddenly has difficulty with balance \n\nYour pet is trying to urinate or defecate but is unable to pass anything. Blockage of the bladder sometimes occurs, especially in males, and can kill if not treated urgently.  "
-        android:layout_marginTop="5dp"
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="404dp"
+        android:layout_height="320dp"
+        android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:layout_width="413dp"
+            android:layout_height="285dp"
+            android:layout_marginTop="5dp"
+            android:padding="8dp"
+            android:text="->Your pet seems weak, is reluctant to get up, or is dull or depressed \n\n->There is difficulty breathing, the breath is noisy or rapid, or there is continual coughing that is causing distress \n\n->There is repeated vomiting, particularly if the animal is young or elderly. Diarrhoea, however, is less serious (except in kittens) unless it is severe, bloody or the animal seems weak or unwell. Feed small amounts of a bland diet (boiled chicken or white fish) and see a vet if it persists more than a day. \n\n->Your cat appears to be in severe pain or discomfort \n\n->your pet suddenly has difficulty with balance \n\n->Your pet is trying to urinate or defecate but is unable to pass anything. Blockage of the bladder sometimes occurs, especially in males, and can kill if not treated urgently.  "
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    </ScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="57dp"
+        android:layout_height="62dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/catcare" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
