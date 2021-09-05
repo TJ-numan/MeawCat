@@ -24,7 +24,7 @@ public class FirstaidActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstaid);
-        searchbar = findViewById(R.id.searchbar);
+//        searchbar = findViewById(R.id.searchbar);
         tasksRecyclerView = findViewById(R.id.itemsrecycler);
 
         titlearray = getResources().getStringArray(R.array.titlearray);
