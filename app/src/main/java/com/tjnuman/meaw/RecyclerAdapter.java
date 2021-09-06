@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Filter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -45,10 +46,8 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
         return title.length;
     }
 
-//    public void filterList(ArrayList<TodoModel>filterdList){
-//        todoList = filterdList;
-//        notifyDataSetChanged();
-//    }
+
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView detail;

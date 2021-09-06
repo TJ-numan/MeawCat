@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Meaw">
         <activity
+            android:name=".BreedActivity"
+            android:exported="true" />
+        <activity
             android:name=".VatcallActivity"
             android:exported="true" />
         <activity

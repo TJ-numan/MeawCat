@@ -1,10 +1,10 @@
 package com.tjnuman.meaw;
 
-public class PostModel {
+public class FactModel {
     private String fact;
 
 
-    public PostModel(String fact) {
+    public FactModel(String fact) {
         this.fact = fact;
     }
 

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
-    android:backgroundTint="#CEE886"
+    android:backgroundTint="#DFF4A2"
     app:cardElevation="4dp"
     android:layout_margin="8dp">
 
@@ -24,8 +24,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/allerta"
                 android:padding="8dp"
-                android:text=" "
-                android:textColor="#3C80F6"
+                android:text=" this is the title"
+                android:textColor="#5E9DD5"
                 android:textSize="20dp"
                 android:textStyle="bold" />
             <TextView

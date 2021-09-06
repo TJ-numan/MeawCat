@@ -20,11 +20,11 @@ public class ButtonActivity extends AppCompatActivity {
         firstaid = findViewById(R.id.firstaid);
 
 
-//        catbreed.setOnClickListener(v -> {
-//
-//            final Intent i = new Intent(ButtonActivity.this, CatbreedActivity.class);
-//            startActivity(i);
-//        });
+        catbreed.setOnClickListener(v -> {
+
+            final Intent i = new Intent(ButtonActivity.this, BreedActivity.class);
+            startActivity(i);
+        });
 
         catfact.setOnClickListener(v -> {
 

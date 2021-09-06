@@ -7,33 +7,23 @@
     android:background="@drawable/cat"
     tools:context=".FirstaidActivity">
 
-<!--    <EditText-->
-<!--        android:id="@+id/searchbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginTop="176dp"-->
-<!--        android:background="#EAF6FB"-->
 
-<!--        android:hint="search your task"-->
-<!--        android:padding="10dp"-->
-<!--        android:textSize="17dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_constraintBottom_toTopOf="@+id/itemsrecycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/itemsrecycler"
-        android:layout_width="457dp"
-        android:layout_height="486dp"
+        android:layout_width="match_parent"
+        android:layout_height="461dp"
         android:layout_alignParentBottom="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921" />
-
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

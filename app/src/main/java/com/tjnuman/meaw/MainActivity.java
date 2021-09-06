@@ -3,8 +3,6 @@ package com.tjnuman.meaw;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,14 +37,14 @@ public class MainActivity extends AppCompatActivity {
                     .build();
 
             JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-            Call<PostModel> call = jsonPlaceHolderApi.getSinglePost();
-            call.enqueue(new Callback<PostModel>() {
+            Call<FactModel> call = jsonPlaceHolderApi.getSinglePost();
+            call.enqueue(new Callback<FactModel>() {
                 @Override
-                public void onResponse(Call<PostModel> call, Response<PostModel> response) {
+                public void onResponse(Call<FactModel> call, Response<FactModel> response) {
                     if (!response.isSuccessful()){
 
                     }
-                    PostModel postModel = response.body();
+                    FactModel postModel = response.body();
                     String content = "";
                     content = "Fact: "+postModel.getFact() + "\n";
 
@@ -54,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onFailure(Call<PostModel> call, Throwable t) {
+                public void onFailure(Call<FactModel> call, Throwable t) {
 
                     meawtext.setText("Network Error");
 
