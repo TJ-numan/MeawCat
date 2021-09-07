@@ -12,7 +12,7 @@ public class BreedResponse implements Serializable
 
     @SerializedName("weight")
     @Expose
-    private Weight weight;
+    private int weight;
     @SerializedName("id")
     @Expose
     private String id;
@@ -123,10 +123,10 @@ public class BreedResponse implements Serializable
     private String referenceImageId;
     @SerializedName("image")
     @Expose
-    private Image image;
+    private String image;
 
 
-    public BreedResponse(Weight weight, String id, String name, String cfaUrl, String vetstreetUrl, String vcahospitalsUrl, String temperament, String origin, String countryCodes, String countryCode, String description, String lifeSpan, Integer indoor, Integer lap, String altNames, Integer adaptability, Integer affectionLevel, Integer childFriendly, Integer dogFriendly, Integer energyLevel, Integer grooming, Integer healthIssues, Integer intelligence, Integer sheddingLevel, Integer socialNeeds, Integer strangerFriendly, Integer vocalisation, Integer experimental, Integer hairless, Integer natural, Integer rare, Integer rex, Integer suppressedTail, Integer shortLegs, String wikipediaUrl, Integer hypoallergenic, String referenceImageId, Image image) {
+    public BreedResponse(int weight, String id, String name, String cfaUrl, String vetstreetUrl, String vcahospitalsUrl, String temperament, String origin, String countryCodes, String countryCode, String description, String lifeSpan, Integer indoor, Integer lap, String altNames, Integer adaptability, Integer affectionLevel, Integer childFriendly, Integer dogFriendly, Integer energyLevel, Integer grooming, Integer healthIssues, Integer intelligence, Integer sheddingLevel, Integer socialNeeds, Integer strangerFriendly, Integer vocalisation, Integer experimental, Integer hairless, Integer natural, Integer rare, Integer rex, Integer suppressedTail, Integer shortLegs, String wikipediaUrl, Integer hypoallergenic, String referenceImageId, String image) {
         this.weight = weight;
         this.id = id;
         this.name = name;
@@ -167,11 +167,11 @@ public class BreedResponse implements Serializable
         this.image = image;
     }
 
-    public Weight getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(Weight weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
@@ -463,11 +463,11 @@ public class BreedResponse implements Serializable
         this.referenceImageId = referenceImageId;
     }
 
-    public Image getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(Image image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

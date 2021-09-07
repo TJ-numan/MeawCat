@@ -37,19 +37,34 @@ public class BreedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breed);
-        breedText = findViewById(R.id.breedText);
+//        breedText = findViewById(R.id.breedText);
 
-//        toolbar = findViewById(R.id.breedingToolbar);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setTitle("Search your Breed here");
-//
-//         arrayList = new ArrayList<>();
-//
-//        recyclerView = findViewById(R.id.breedingrecycler);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        adapter = new BreedAdapter(this,arrayList);
-//
-//        recyclerView.setAdapter(adapter);
+        toolbar = findViewById(R.id.breedToolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Search your Breed here");
+
+         arrayList = new ArrayList<>();
+         arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+        arrayList.add(new BreedResponse(2,"2","Persian","","","","","Egypt","","","This type of cat so energetic it can play all day all night but wont get tiard. they can eat a lot also","5-6 years",2,2,"",3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,"",2,"",""));
+
+
+        recyclerView = findViewById(R.id.breedRecyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new BreedAdapter(this,arrayList);
+
+        recyclerView.setAdapter(adapter);
 
 
 
@@ -80,17 +95,20 @@ public class BreedActivity extends AppCompatActivity {
                 List<BreedResponse> postModels = response.body();
                 for (BreedResponse postModel : Objects.requireNonNull(postModels)) {
 
-                    String content = "";
 
-                content += "Name: " + postModel.getName() + "\n";
-                content += "Origin: " + postModel.getOrigin() + "\n";
-                content += "Life Span: " + postModel.getLifeSpan() + "\n";
-                content += "Description: " + postModel.getDescription() + "\n";
-                if(postModel.getImage() != null){
-                    content += "image_url: " + postModel.getImage().getUrl() + "\n\n\n\n";
-                }
+                    arrayList.add(postModel);
 
-                    breedText.append(content);
+//                    String content = "";
+//
+//                content += "Name: " + postModel.getName() + "\n";
+//                content += "Origin: " + postModel.getOrigin() + "\n";
+//                content += "Life Span: " + postModel.getLifeSpan() + "\n";
+//                content += "Description: " + postModel.getDescription() + "\n";
+//                if(postModel.getImage() != null){
+//                    content += "image_url: " + postModel.getImage().getUrl() + "\n\n\n\n";
+//                }
+//
+//                    breedText.append(content);
 
             }
             }
