@@ -41,6 +41,18 @@
         app:layout_constraintStart_toStartOf="@+id/firstaid"
         app:layout_constraintTop_toBottomOf="@+id/firstaid" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/catrunning" />
+
+
     <ImageView
         android:id="@+id/catbreed"
         android:layout_width="260dp"
@@ -51,8 +63,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/whentocallvat"
         app:layout_constraintTop_toBottomOf="@+id/whentocallvat" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

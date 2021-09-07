@@ -12,18 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Meaw">
         <activity
-            android:name=".BreedActivity"
+            android:name=".breed.BreedActivity"
             android:exported="true" />
         <activity
-            android:name=".VatcallActivity"
+            android:name=".vatCall.VatcallActivity"
             android:exported="true" />
         <activity
-            android:name=".FirstaidActivity"
+            android:name=".firstAid.FirstaidActivity"
             android:exported="true" />
         <activity
             android:name=".ButtonActivity"
             android:exported="true" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".fact.FactActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

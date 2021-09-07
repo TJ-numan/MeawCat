@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/uy6/AndroidStudioProjects/Meaw/app/src/main/res/drawable-v24/search_24.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/uy6/AndroidStudioProjects/Meaw/app/src/main/res/layout/activity_breed.xml" value="0.1814814814814815" />
         <entry key="..\:/Users/uy6/AndroidStudioProjects/Meaw/app/src/main/res/layout/activity_button.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/uy6/AndroidStudioProjects/Meaw/app/src/main/res/layout/activity_firstaid.xml" value="0.25" />
@@ -10,6 +11,7 @@
         <entry key="..\:/Users/uy6/AndroidStudioProjects/Meaw/app/src/main/res/layout/activity_splash.xml" value="0.14402173913043478" />
         <entry key="..\:/Users/uy6/AndroidStudioProjects/Meaw/app/src/main/res/layout/activity_vatcall.xml" value="0.22" />
         <entry key="..\:/Users/uy6/AndroidStudioProjects/Meaw/app/src/main/res/layout/task_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/uy6/AndroidStudioProjects/Meaw/app/src/main/res/menu/search_menu.xml" value="0.1814814814814815" />
       </map>
     </option>
   </component>

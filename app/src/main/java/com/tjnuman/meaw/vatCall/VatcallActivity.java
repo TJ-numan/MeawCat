@@ -1,8 +1,10 @@
-package com.tjnuman.meaw;
+package com.tjnuman.meaw.vatCall;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.tjnuman.meaw.R;
 
 public class VatcallActivity extends AppCompatActivity {
 

@@ -1,5 +1,5 @@
 
-package com.tjnuman.meaw.breedRes;
+package com.tjnuman.meaw.breed.breedRes;
 
 import java.io.Serializable;
 

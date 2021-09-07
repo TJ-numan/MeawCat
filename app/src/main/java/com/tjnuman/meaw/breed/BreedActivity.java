@@ -1,15 +1,16 @@
-package com.tjnuman.meaw;
+package com.tjnuman.meaw.breed;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.tjnuman.meaw.breedRes.BreedResponse;
+import com.tjnuman.meaw.JsonPlaceHolderApi;
+import com.tjnuman.meaw.R;
+import com.tjnuman.meaw.breed.breedRes.BreedResponse;
 
 import java.util.List;
 import java.util.Objects;

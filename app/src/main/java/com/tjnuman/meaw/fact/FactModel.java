@@ -1,4 +1,4 @@
-package com.tjnuman.meaw;
+package com.tjnuman.meaw.fact;
 
 public class FactModel {
     private String fact;

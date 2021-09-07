@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
+
+import com.tjnuman.meaw.breed.BreedActivity;
+import com.tjnuman.meaw.fact.FactActivity;
+import com.tjnuman.meaw.firstAid.FirstaidActivity;
+import com.tjnuman.meaw.vatCall.VatcallActivity;
 
 public class ButtonActivity extends AppCompatActivity {
     ImageView catfact,catbreed,firstaid,vatcall;
@@ -28,7 +32,7 @@ public class ButtonActivity extends AppCompatActivity {
 
         catfact.setOnClickListener(v -> {
 
-            final Intent i = new Intent(ButtonActivity.this, MainActivity.class);
+            final Intent i = new Intent(ButtonActivity.this, FactActivity.class);
             startActivity(i);
         });
 
