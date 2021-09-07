@@ -125,6 +125,48 @@ public class BreedResponse implements Serializable
     @Expose
     private Image image;
 
+
+    public BreedResponse(Weight weight, String id, String name, String cfaUrl, String vetstreetUrl, String vcahospitalsUrl, String temperament, String origin, String countryCodes, String countryCode, String description, String lifeSpan, Integer indoor, Integer lap, String altNames, Integer adaptability, Integer affectionLevel, Integer childFriendly, Integer dogFriendly, Integer energyLevel, Integer grooming, Integer healthIssues, Integer intelligence, Integer sheddingLevel, Integer socialNeeds, Integer strangerFriendly, Integer vocalisation, Integer experimental, Integer hairless, Integer natural, Integer rare, Integer rex, Integer suppressedTail, Integer shortLegs, String wikipediaUrl, Integer hypoallergenic, String referenceImageId, Image image) {
+        this.weight = weight;
+        this.id = id;
+        this.name = name;
+        this.cfaUrl = cfaUrl;
+        this.vetstreetUrl = vetstreetUrl;
+        this.vcahospitalsUrl = vcahospitalsUrl;
+        this.temperament = temperament;
+        this.origin = origin;
+        this.countryCodes = countryCodes;
+        this.countryCode = countryCode;
+        this.description = description;
+        this.lifeSpan = lifeSpan;
+        this.indoor = indoor;
+        this.lap = lap;
+        this.altNames = altNames;
+        this.adaptability = adaptability;
+        this.affectionLevel = affectionLevel;
+        this.childFriendly = childFriendly;
+        this.dogFriendly = dogFriendly;
+        this.energyLevel = energyLevel;
+        this.grooming = grooming;
+        this.healthIssues = healthIssues;
+        this.intelligence = intelligence;
+        this.sheddingLevel = sheddingLevel;
+        this.socialNeeds = socialNeeds;
+        this.strangerFriendly = strangerFriendly;
+        this.vocalisation = vocalisation;
+        this.experimental = experimental;
+        this.hairless = hairless;
+        this.natural = natural;
+        this.rare = rare;
+        this.rex = rex;
+        this.suppressedTail = suppressedTail;
+        this.shortLegs = shortLegs;
+        this.wikipediaUrl = wikipediaUrl;
+        this.hypoallergenic = hypoallergenic;
+        this.referenceImageId = referenceImageId;
+        this.image = image;
+    }
+
     public Weight getWeight() {
         return weight;
     }

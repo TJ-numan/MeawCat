@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/breedName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@+id/image_id"
+            android:padding="10dp"
+            android:text="Dhaka"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/breedOrigin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/breedName"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@+id/image_id"
+            android:padding="10dp"
+            android:text="capital of bangladesh"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/breedLifeSpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/breedOrigin"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@+id/image_id"
+            android:padding="10dp"
+            android:text="capital of bangladesh"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/breedDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/breedLifeSpan"
+            android:layout_toEndOf="@+id/image_id"
+            android:padding="10dp"
+            android:text="capital of bangladesh name is Dhaka and it is so big to travel for aother peop. so that ttorist doest come here most ofthe and there is "
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="normal" />
+
+
+        <ImageView
+            android:id="@+id/image_id"
+            android:layout_width="95dp"
+            android:layout_height="108dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/cattt" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

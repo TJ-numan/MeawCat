@@ -8,12 +8,14 @@ import android.os.Handler;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.RelativeLayout;
 
 import com.airbnb.lottie.LottieAnimationView;
 
 public class SplashActivity extends AppCompatActivity {
 
     Animation topAnimation, bottomAnimation;
+    RelativeLayout topimage;
     LottieAnimationView animationView;
 
     @Override
@@ -23,12 +25,13 @@ public class SplashActivity extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         animationView = findViewById(R.id.animationView);
+        topimage = findViewById(R.id.topimage);
 
         bottomAnimation = AnimationUtils.loadAnimation(this,R.anim.downtotop);
-        animationView.setAnimation(bottomAnimation);
+        topAnimation = AnimationUtils.loadAnimation(this,R.anim.toptodown);
 
-//        topAnimation = AnimationUtils.loadAnimation(this,R.anim.toptodown);
-//        animationView.setAnimation(topAnimation);
+        animationView.setAnimation(bottomAnimation);
+        topimage.setAnimation(topAnimation);
 
 
 
