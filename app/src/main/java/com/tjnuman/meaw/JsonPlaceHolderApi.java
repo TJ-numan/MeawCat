@@ -3,6 +3,7 @@ package com.tjnuman.meaw;
 import com.tjnuman.meaw.breed.breedRes.BreedResponse;
 import com.tjnuman.meaw.fact.FactModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -15,7 +16,7 @@ public interface JsonPlaceHolderApi {
 
 
     @GET("v1/breeds") //https://api.thecatapi.com/v1/breeds
-    Call<List<BreedResponse>> getBreedPost();
+    Call<ArrayList<BreedResponse>> getBreedPost();
 
 //    @POST("posts")
 //    Call<PostModel>creatPost(@Body PostModel post);

@@ -67,10 +67,10 @@ public class BreedActivity extends AppCompatActivity {
                 .build();
 
         JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-        Call<List<BreedResponse>> call = jsonPlaceHolderApi.getBreedPost();
-        call.enqueue(new Callback<List<BreedResponse>>() {
+        Call<ArrayList<BreedResponse>> call = jsonPlaceHolderApi.getBreedPost();
+        call.enqueue(new Callback<ArrayList<BreedResponse>>() {
             @Override
-            public void onResponse(@NonNull Call<List<BreedResponse>> call, @NonNull Response<List<BreedResponse> > response) {
+            public void onResponse(@NonNull Call<ArrayList<BreedResponse>> call, @NonNull Response<ArrayList<BreedResponse> > response) {
                 if (!response.isSuccessful()) {
                     breedText.setText(response.code());
                     return;
@@ -81,24 +81,22 @@ public class BreedActivity extends AppCompatActivity {
                 for (BreedResponse postModel : Objects.requireNonNull(postModels)) {
 
                     String content = "";
-//                content += "Image: " + postModel.getImage() + "\n";
+
                 content += "Name: " + postModel.getName() + "\n";
                 content += "Origin: " + postModel.getOrigin() + "\n";
                 content += "Life Span: " + postModel.getLifeSpan() + "\n";
-                content += "Description: " + postModel.getDescription() + "\n\n\n\n";
-                breedText.append(content);
-//                if(postModel.getImage().getUrl() != null){
-//
-//                    content += "image_url: " + postModel.getImage().getUrl() + "\n\n";
-//
-//
-//                }
+                content += "Description: " + postModel.getDescription() + "\n";
+                if(postModel.getImage() != null){
+                    content += "image_url: " + postModel.getImage().getUrl() + "\n\n\n\n";
+                }
+
+                    breedText.append(content);
 
             }
             }
 
             @Override
-            public void onFailure(@NonNull Call<List<BreedResponse>> call, @NonNull Throwable t) {
+            public void onFailure(@NonNull Call<ArrayList<BreedResponse>> call, @NonNull Throwable t) {
 
                // breedText.setText(t.getMessage());
                 Log.d("my_res", "onFailure: error: "+t.getMessage());
