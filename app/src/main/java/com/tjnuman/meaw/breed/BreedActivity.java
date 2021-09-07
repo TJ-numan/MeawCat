@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.tjnuman.meaw.JsonPlaceHolderApi;
 import com.tjnuman.meaw.R;
@@ -25,6 +26,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class BreedActivity extends AppCompatActivity {
+    TextView breedText;
 
     private RecyclerView recyclerView;
     private BreedAdapter adapter;
@@ -35,18 +37,19 @@ public class BreedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breed);
+        breedText = findViewById(R.id.breedText);
 
-        toolbar = findViewById(R.id.breedingToolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Search your Breed here");
-
-         arrayList = new ArrayList<>();
-
-        recyclerView = findViewById(R.id.breedingrecycler);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new BreedAdapter(this,arrayList);
-
-        recyclerView.setAdapter(adapter);
+//        toolbar = findViewById(R.id.breedingToolbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setTitle("Search your Breed here");
+//
+//         arrayList = new ArrayList<>();
+//
+//        recyclerView = findViewById(R.id.breedingrecycler);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        adapter = new BreedAdapter(this,arrayList);
+//
+//        recyclerView.setAdapter(adapter);
 
 
 
@@ -69,7 +72,7 @@ public class BreedActivity extends AppCompatActivity {
             @Override
             public void onResponse(@NonNull Call<List<BreedResponse>> call, @NonNull Response<List<BreedResponse> > response) {
                 if (!response.isSuccessful()) {
-                    //breedText.setText(response.code());
+                    breedText.setText(response.code());
                     return;
 
                 }
@@ -83,7 +86,7 @@ public class BreedActivity extends AppCompatActivity {
                 content += "Origin: " + postModel.getOrigin() + "\n";
                 content += "Life Span: " + postModel.getLifeSpan() + "\n";
                 content += "Description: " + postModel.getDescription() + "\n\n\n\n";
-               // breedText.append(content);
+                breedText.append(content);
 //                if(postModel.getImage().getUrl() != null){
 //
 //                    content += "image_url: " + postModel.getImage().getUrl() + "\n\n";

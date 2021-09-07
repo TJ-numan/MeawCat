@@ -6,22 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".breed.BreedActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/breedingToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="393dp"
+        android:layout_height="616dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/breedText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F1F1F1"
+            android:padding="8dp"
+            android:text=" "
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="2dp" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/breedButton"
+        android:layout_width="87dp"
+        android:layout_height="80dp"
+        android:src="@drawable/cat8"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/breedingrecycler"
-        android:layout_width="381dp"
-        android:layout_height="654dp"
-        android:layout_below="@+id/breedingToolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/breedingToolbar">
-
-    </androidx.recyclerview.widget.RecyclerView>
 </androidx.constraintlayout.widget.ConstraintLayout>
