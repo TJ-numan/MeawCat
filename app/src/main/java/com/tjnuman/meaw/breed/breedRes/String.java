@@ -7,12 +7,12 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class Image implements Serializable
+public class String implements Serializable
 {
 
     @SerializedName("id")
     @Expose
-    private String id;
+    private java.lang.String id;
     @SerializedName("width")
     @Expose
     private Integer width;
@@ -21,13 +21,13 @@ public class Image implements Serializable
     private Integer height;
     @SerializedName("url")
     @Expose
-    private String url;
+    private java.lang.String url;
 
-    public String getId() {
+    public java.lang.String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(java.lang.String id) {
         this.id = id;
     }
 
@@ -47,11 +47,11 @@ public class Image implements Serializable
         this.height = height;
     }
 
-    public String getUrl() {
+    public java.lang.String getUrl() {
         return url;
     }
 
-    public void setUrl(String url) {
+    public void setUrl(java.lang.String url) {
         this.url = url;
     }
 

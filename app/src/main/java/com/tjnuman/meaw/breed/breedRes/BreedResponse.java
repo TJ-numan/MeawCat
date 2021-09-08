@@ -12,29 +12,29 @@ public class BreedResponse implements Serializable
 
     @SerializedName("name")
     @Expose
-    private String name;
+    private java.lang.String name;
 
     @SerializedName("origin")
     @Expose
-    private String origin;
+    private java.lang.String origin;
 
     @SerializedName("description")
     @Expose
-    private String description;
+    private java.lang.String description;
 
     @SerializedName("life_span")
     @Expose
-    private String lifeSpan;
+    private java.lang.String lifeSpan;
 
     @SerializedName("reference_image_id")
     @Expose
-    private String referenceImageId;
+    private java.lang.String referenceImageId;
     @SerializedName("image")
     @Expose
-    private Image image;
+    private String image;
 
 
-    public BreedResponse(String name, String origin, String description, String lifeSpan, String referenceImageId, Image image) {
+    public BreedResponse(java.lang.String name, java.lang.String origin, java.lang.String description, java.lang.String lifeSpan, java.lang.String referenceImageId, String image) {
 
         this.name = name;
         this.origin = origin;
@@ -46,52 +46,52 @@ public class BreedResponse implements Serializable
 
 
 
-    public String getName() {
+    public java.lang.String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(java.lang.String name) {
         this.name = name;
     }
 
-    public String getOrigin() {
+    public java.lang.String getOrigin() {
         return origin;
     }
 
-    public void setOrigin(String origin) {
+    public void setOrigin(java.lang.String origin) {
         this.origin = origin;
     }
 
-    public String getDescription() {
+    public java.lang.String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(java.lang.String description) {
         this.description = description;
     }
 
-    public String getLifeSpan() {
+    public java.lang.String getLifeSpan() {
         return lifeSpan;
     }
 
-    public void setLifeSpan(String lifeSpan) {
+    public void setLifeSpan(java.lang.String lifeSpan) {
         this.lifeSpan = lifeSpan;
     }
 
 
-    public String getReferenceImageId() {
+    public java.lang.String getReferenceImageId() {
         return referenceImageId;
     }
 
-    public void setReferenceImageId(String referenceImageId) {
+    public void setReferenceImageId(java.lang.String referenceImageId) {
         this.referenceImageId = referenceImageId;
     }
 
-    public Image getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(Image image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

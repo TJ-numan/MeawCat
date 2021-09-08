@@ -75,7 +75,7 @@ public class BreedAdapter extends RecyclerView.Adapter<BreedAdapter.MyViewHolder
                 filterList.addAll(getBreedNameArrayFull);
             }
             else {
-                String filterPattern = charSequence.toString().toLowerCase().trim();
+                java.lang.String filterPattern = charSequence.toString().toLowerCase().trim();
 
                 for (BreedResponse item:getBreedNameArrayFull)
                 {
