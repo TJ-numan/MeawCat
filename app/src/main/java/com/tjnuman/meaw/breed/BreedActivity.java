@@ -32,28 +32,33 @@ public class BreedActivity extends AppCompatActivity {
     private BreedAdapter adapter;
     private Toolbar toolbar;
     private ArrayList<BreedResponse> arrayList;
+    String name,description,lifespan,origin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breed);
-        breedText = findViewById(R.id.breedText);
 
-//        toolbar = findViewById(R.id.breedingToolbar);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setTitle("Search your Breed here");
-//
-//         arrayList = new ArrayList<>();
-//
-//        recyclerView = findViewById(R.id.breedingrecycler);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        adapter = new BreedAdapter(this,arrayList);
-//
-//        recyclerView.setAdapter(adapter);
+        getCatBreed();
+
+        toolbar = findViewById(R.id. breedToolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Search your Breed here");
+
+
+         arrayList = new ArrayList<>();
 
 
 
-         getCatBreed();
+        recyclerView = findViewById(R.id.breedRecyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new BreedAdapter(this,arrayList);
+
+        recyclerView.setAdapter(adapter);
+
+
+
+
 
 
 
@@ -72,7 +77,7 @@ public class BreedActivity extends AppCompatActivity {
             @Override
             public void onResponse(@NonNull Call<ArrayList<BreedResponse>> call, @NonNull Response<ArrayList<BreedResponse> > response) {
                 if (!response.isSuccessful()) {
-                    breedText.setText(response.code());
+                 //   breedText.setText(response.code());
                     return;
 
                 }
@@ -82,17 +87,19 @@ public class BreedActivity extends AppCompatActivity {
 
                     String content = "";
 
-                content += "Name: " + postModel.getName() + "\n";
-                content += "Origin: " + postModel.getOrigin() + "\n";
-                content += "Life Span: " + postModel.getLifeSpan() + "\n";
-                content += "Description: " + postModel.getDescription() + "\n";
+                name =  postModel.getName();
+                origin = "Origin: " + postModel.getOrigin();
+                 lifespan = "Life Span: " + postModel.getLifeSpan();
+                description = "Description: " + postModel.getDescription();
                 if(postModel.getImage() != null){
                     content += "image_url: " + postModel.getImage().getUrl() + "\n\n\n\n";
+                   // arrayList.add(new BreedResponse(postModel.getName(),postModel.getOrigin(),postModel.getLifeSpan(),postModel.getDescription(),postModel.getImage().getUrl()));
                 }
+                    arrayList.add(new BreedResponse(name,origin,lifespan,description));
+                    adapter.notifyDataSetChanged();
 
-                    breedText.append(content);
 
-            }
+                }
             }
 
             @Override

@@ -29,13 +29,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/breedName"
-            android:layout_gravity="center"
             android:layout_toEndOf="@+id/image_id"
             android:padding="10dp"
             android:text="capital of bangladesh"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="16sp"
             android:textStyle="normal" />
 
         <TextView
@@ -43,13 +42,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/breedOrigin"
-            android:layout_gravity="center"
+            android:layout_marginStart="-3dp"
+            android:layout_marginTop="0dp"
             android:layout_toEndOf="@+id/image_id"
             android:padding="10dp"
             android:text="capital of bangladesh"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="16sp"
             android:textStyle="normal" />
 
         <TextView
@@ -62,7 +62,7 @@
             android:text="capital of bangladesh name is Dhaka and it is so big to travel for aother peop. so that ttorist doest come here most ofthe and there is "
             android:textAlignment="textStart"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="16sp"
             android:textStyle="normal" />
 
 
