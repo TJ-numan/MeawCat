@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.tjnuman.meaw.R;
 
 import java.util.ArrayList;
@@ -48,7 +49,7 @@ public class BreedAdapter extends RecyclerView.Adapter<BreedAdapter.MyViewHolder
         holder.origin.setText(getData.getOrigin());
         holder.lifeSpan.setText(getData.getLifeSpan());
         holder.description.setText(getData.getDescription());
-      //  holder.img.setImageResource(getData.getImage().getUrl());
+       // Glide.with(holder.img.getContext()).load(getData.getImage().getUrl()).into(holder.img);
 
 
 

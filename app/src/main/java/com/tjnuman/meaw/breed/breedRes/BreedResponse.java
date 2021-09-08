@@ -42,6 +42,13 @@ public class BreedResponse implements Serializable
     }
 
 
+//    public BreedResponse(java.lang.String name, java.lang.String origin, java.lang.String description, java.lang.String lifeSpan, String image) {
+//        this.name = name;
+//        this.origin = origin;
+//        this.description = description;
+//        this.lifeSpan = lifeSpan;
+//        this.image = image;
+//    }
 
     public java.lang.String getName() {
         return name;

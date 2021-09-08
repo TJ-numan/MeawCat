@@ -10,19 +10,40 @@
         android:id="@+id/breedToolbar"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <ScrollView
+
+        android:id="@+id/scrollView3"
+        android:layout_width="391dp"
+        android:layout_height="182dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/breedtext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E8F4E6"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+    </ScrollView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/breedRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="652dp"
+        android:layout_width="395dp"
+        android:layout_height="517dp"
         android:layout_below="@+id/breedToolbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/breedToolbar">
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3">
 
 
     </androidx.recyclerview.widget.RecyclerView>

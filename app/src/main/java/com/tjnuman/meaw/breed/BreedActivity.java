@@ -3,11 +3,15 @@ package com.tjnuman.meaw.breed;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.tjnuman.meaw.JsonPlaceHolderApi;
@@ -34,10 +38,13 @@ public class BreedActivity extends AppCompatActivity {
     private ArrayList<BreedResponse> arrayList;
     String name,description,lifespan,origin;
 
+    String url;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breed);
+        breedText = findViewById(R.id.breedtext);
 
         getCatBreed();
 
@@ -89,13 +96,15 @@ public class BreedActivity extends AppCompatActivity {
 
                 name =  postModel.getName();
                 origin = "Origin: " + postModel.getOrigin();
-                 lifespan = "Life Span: " + postModel.getLifeSpan();
+                 lifespan = "Life Span: " + postModel.getLifeSpan()+" years";
                 description = "Description: " + postModel.getDescription();
                 if(postModel.getImage() != null){
-                    content += "image_url: " + postModel.getImage().getUrl() + "\n\n\n\n";
+                    url = "image_url: " + postModel.getImage().getUrl() + "\n\n\n";
                    // arrayList.add(new BreedResponse(postModel.getName(),postModel.getOrigin(),postModel.getLifeSpan(),postModel.getDescription(),postModel.getImage().getUrl()));
                 }
-                    arrayList.add(new BreedResponse(name,origin,lifespan,description));
+
+                breedText.append(name+"\n"+origin+"\n"+lifespan+"\n"+description+"\n"+url);
+                arrayList.add(new BreedResponse(name,origin,lifespan,description));
                     adapter.notifyDataSetChanged();
 
 
@@ -117,5 +126,30 @@ public class BreedActivity extends AppCompatActivity {
 
 
 
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.search_menu,menu);
+
+        MenuItem menuItem=menu.findItem(R.id.search_id);
+        android.widget.SearchView searchView=(android.widget.SearchView) MenuItemCompat.getActionView(menuItem);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                adapter.getFilter().filter(s);
+                return false;
+            }
+        });
+
+        return true;
     }
 }
