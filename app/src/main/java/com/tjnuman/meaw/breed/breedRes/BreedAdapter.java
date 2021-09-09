@@ -49,7 +49,7 @@ public class BreedAdapter extends RecyclerView.Adapter<BreedAdapter.MyViewHolder
         holder.origin.setText(getData.getOrigin());
         holder.lifeSpan.setText(getData.getLifeSpan());
         holder.description.setText(getData.getDescription());
-       // Glide.with(holder.img.getContext()).load(getData.getImage().getUrl()).into(holder.img);
+        Glide.with(holder.img.getContext()).load("https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg").into(holder.img);
 
 
 

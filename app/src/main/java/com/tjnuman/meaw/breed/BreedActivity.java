@@ -36,9 +36,8 @@ public class BreedActivity extends AppCompatActivity {
     private BreedAdapter adapter;
     private Toolbar toolbar;
     private ArrayList<BreedResponse> arrayList;
-    String name,description,lifespan,origin;
+    String name,description,lifespan,origin,url;
 
-    String url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,11 +99,12 @@ public class BreedActivity extends AppCompatActivity {
                 description = "Description: " + postModel.getDescription();
                 if(postModel.getImage() != null){
                     url = "image_url: " + postModel.getImage().getUrl() + "\n\n\n";
+
                    // arrayList.add(new BreedResponse(postModel.getName(),postModel.getOrigin(),postModel.getLifeSpan(),postModel.getDescription(),postModel.getImage().getUrl()));
                 }
 
-                breedText.append(name+"\n"+origin+"\n"+lifespan+"\n"+description+"\n"+url);
-                arrayList.add(new BreedResponse(name,origin,lifespan,description));
+                breedText.append(name+"\n"+origin+"\n"+lifespan+"\n"+description+"\n"+ url);
+                arrayList.add(new BreedResponse(name,origin,lifespan,description,url));
                     adapter.notifyDataSetChanged();
 
 
@@ -114,7 +114,7 @@ public class BreedActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Call<ArrayList<BreedResponse>> call, @NonNull Throwable t) {
 
-               // breedText.setText(t.getMessage());
+                breedText.setText(t.getMessage());
                 Log.d("my_res", "onFailure: error: "+t.getMessage());
 
             }

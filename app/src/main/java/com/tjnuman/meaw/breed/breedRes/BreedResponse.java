@@ -31,24 +31,24 @@ public class BreedResponse implements Serializable
     private String image;
 
 
-    public BreedResponse(java.lang.String name, java.lang.String origin, java.lang.String lifeSpan , java.lang.String description) {
-
-        this.name = name;
-        this.origin = origin;
-        this.description = description;
-        this.lifeSpan = lifeSpan;
-
-
-    }
-
-
-//    public BreedResponse(java.lang.String name, java.lang.String origin, java.lang.String description, java.lang.String lifeSpan, String image) {
+//    public BreedResponse(java.lang.String name, java.lang.String origin, java.lang.String lifeSpan , java.lang.String description) {
+//
 //        this.name = name;
 //        this.origin = origin;
 //        this.description = description;
 //        this.lifeSpan = lifeSpan;
-//        this.image = image;
+//
+//
 //    }
+
+
+    public BreedResponse(java.lang.String name, java.lang.String origin, java.lang.String lifeSpan, java.lang.String description, String image) {
+        this.name = name;
+        this.origin = origin;
+        this.description = description;
+        this.lifeSpan = lifeSpan;
+        this.image = image;
+    }
 
     public java.lang.String getName() {
         return name;
