@@ -4,8 +4,6 @@ import com.tjnuman.meaw.breed.breedRes.BreedResponse;
 import com.tjnuman.meaw.fact.FactModel;
 
 import java.util.ArrayList;
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 

@@ -1,15 +1,16 @@
 package com.tjnuman.meaw.firstAid;
 
 public class FirstAidModel {
-
     private String title;
     private String des;
+
 
     public FirstAidModel(String title, String des) {
 
         this.title = title;
         this.des = des;
     }
+
 
 
     public String getTitle() {

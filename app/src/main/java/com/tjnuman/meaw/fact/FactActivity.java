@@ -28,8 +28,8 @@ public class FactActivity extends AppCompatActivity {
         meaw = findViewById(R.id.meaw);
 
 
-
-        meaw.setOnClickListener(v -> getCatFact());
+        getCatFact();
+        //meaw.setOnClickListener(v -> getCatFact());
     }
 
     private void getCatFact() {

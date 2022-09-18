@@ -16,17 +16,17 @@ import com.tjnuman.meaw.R;
 import java.util.ArrayList;
 
 public class FirstaidActivity extends AppCompatActivity {
-    private RecyclerView tasksRecyclerView, recyclerView;
+    private RecyclerView  recyclerView;
     private RecyclerAdapter tasksAdapter;
     private reAdapter adapter;
     private Toolbar toolbar;
     String[] titlearray, descriptionarray;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstaid);
-
 
 //        tasksRecyclerView = findViewById(R.id.itemsrecycler);
 //        titlearray = getResources().getStringArray(R.array.titlearray);
@@ -36,10 +36,12 @@ public class FirstaidActivity extends AppCompatActivity {
 //        tasksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
+
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("        search your cats injury here");
+        getSupportActionBar().setTitle("search your cats injury here");
         ArrayList<FirstAidModel> arrayList = new ArrayList<>();
+
 
         arrayList.add(new FirstAidModel("Road Accident","Prevention is better than cure so keep your cat in at night, as this is when most road accidents occur. If you find a cat involved in a road accident, take them to the vet, even if the cat appears to be unhurt. There may be internal injuries that are not immediately obvious. Pick up the cat carefully as described above, keeping them warm, and place them in a box for transportation to the surgery."));
         arrayList.add(new FirstAidModel("Falls","Falls can cause severe injuries. If you live in a flat, open windows should be covered with screens. Do not let your cat out onto an unprotected balcony. If your cat falls from a height, take the animal to the vet for a check-up. "));
@@ -71,7 +73,6 @@ public class FirstaidActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.search_menu,menu);
-
         MenuItem menuItem=menu.findItem(R.id.search_id);
         android.widget.SearchView searchView=(android.widget.SearchView) MenuItemCompat.getActionView(menuItem);
 
