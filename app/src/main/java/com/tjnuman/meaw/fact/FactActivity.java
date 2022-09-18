@@ -29,7 +29,7 @@ public class FactActivity extends AppCompatActivity {
 
 
         getCatFact();
-        //meaw.setOnClickListener(v -> getCatFact());
+        meaw.setOnClickListener(v -> getCatFact());
     }
 
     private void getCatFact() {
